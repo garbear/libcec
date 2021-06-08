@@ -44,3 +44,8 @@ if(WIN32)
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/dotnet/src/CecSharpTester/netfx/Properties/AssemblyInfo.cs.in
                  ${CMAKE_CURRENT_SOURCE_DIR}/src/dotnet/src/CecSharpTester/netfx/Properties/AssemblyInfo.cs)
 endif()
+
+# Declare an ament package
+cmake_policy(SET CMP0057 NEW)
+find_package(ament_cmake REQUIRED)
+ament_package()
